@@ -3,30 +3,19 @@ package entites;
 import entites2.Personne;
 
 public class TestPersonne {
+
     public static void main(String[] args) {
 
-        AdressePostale a1 = new AdressePostale();
-        a1.numeroRue = 58;
-        a1.libelleRue = "rue sans issue";
-        a1.codePostal = "13000";
-        a1.ville = "Carry";
+        AdressePostale a1 =
+                new AdressePostale(58, "rue sans issue",
+                        "13000", "Carry");
 
-        AdressePostale a2 = new AdressePostale();
-        a1.numeroRue = 17;
-        a1.libelleRue = "rue convert ";
-        a1.codePostal = "33000";
-        a1.ville = "Bordeaux";
+        AdressePostale a2 =
+                new AdressePostale(17, "rue convert",
+                        "33000", "Bordeaux");
 
-
-        Personne nom1 = new Personne();
-        nom1.nom = " Jean ";
-        nom1.prenom = " Bon ";
-        nom1.adresse = a1;
-        Personne nom2 = new Personne();
-        nom2.nom = " Jean ";
-        nom2.prenom = " Bon ";
-        nom2.adresse = a2;
-
-
+        Personne p1 = new Personne("Jean", "Bon", a1);
+        Personne p2 = new Personne("Jean", "Bon", a2);
     }
+
 }
