@@ -25,4 +25,5 @@ public class testBanque {
         }
     }
 }
-// dans le for : ( Compte (est le type) compte (est la variable) : et comptes ( le tableau complet )
+// dans le for : ( Compte (est le type) compte (est la variable) :( : veut dire dans ou dans chaque tableaux)
+// et comptes ( le tableau complet )

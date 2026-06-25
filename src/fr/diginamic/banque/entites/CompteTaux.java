@@ -9,6 +9,10 @@ public class CompteTaux extends Compte {
         this.tauxRemuneration = tauxRemuneration;  // Taux de rémunération
     }
 
+    public double getTauxRemuneration() {
+        return tauxRemuneration;
+    }
+
     @Override
     public String toString() {  // super pour appeler la méthode toString() de Compte
 // Récupère l'affichage de Compte puis ajoute le taux
