@@ -2,7 +2,7 @@ package fr.diginamic.banque.entites;
 
 public class Compte {
 
-
+    // Attributs
     private String numeroCompte;   // Attributs privés (encapsulation)
     private double solde;
 
