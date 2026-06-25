@@ -20,3 +20,13 @@ public class CompteTaux extends Compte {
                 ", tauxRemuneration=" + tauxRemuneration;  //  Ajout du tauxRenumeration
     }
 }
+
+/*Héritage vs association : public class Voiture {
+    private String marque;
+    private String modele;
+    private String categorie;
+    private Moteur moteur; //association - la voiture a un moteur
+} et classe Moteur : public class Moteur {
+    private String puissance;
+    private double cylindree;
+}  ==> Exemple d'héritage et association*/
