@@ -1,4 +1,5 @@
 package fr.diginamic.banque.entites;
+
 public abstract class Operation {
 
 
