@@ -1,6 +1,6 @@
 package listes;
 
-import java.util.ArrayList;
+/*import java.util.ArrayList;
 
 public class TestVilles {
 
@@ -47,7 +47,7 @@ public class TestVilles {
         }
         System.out.println("Liste finale : " + villes);  /// J'affiche la liste finale
     }
-}
+}*/
 
 /// pour mémoire :
 /// get(i) : récupérer l'élément de la case i

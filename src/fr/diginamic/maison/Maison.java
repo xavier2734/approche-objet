@@ -3,7 +3,7 @@ package fr.diginamic.maison;
 public class Maison {
 
 
-    private Piece[] pieces; // Tableau qui contient toutes les pièces de la maison
+    private Piece[] pieces; /// Tableau qui contient toutes les pièces de la maison
 
     public Maison() {  // Au départ, la maison ne contient aucune pièce
         pieces = new Piece[0];

@@ -1,5 +1,7 @@
 package tri;
 
+import java.util.Objects;
+
 class Casa implements Comparable<Casa> {
 
     private String nom;
@@ -16,6 +18,18 @@ class Casa implements Comparable<Casa> {
     public int getNbHabitants() {
         return nbHabitants;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Casa casa)) return false;
+        return nbHabitants == casa.nbHabitants && Objects.equals(nom, casa.nom);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nom, nbHabitants);
+    }
+
     @Override
     public String toString() {
         return nom + " (" + nbHabitants + ")";
@@ -32,5 +46,16 @@ class Casa implements Comparable<Casa> {
         }
         return 0;
     }
+
+    public int getHabitants() {
+        return 0;
+    }
+
+
+    /// pn peut faire ceci :
+    ///  @Override
+    /// public int compareTo(Ville autreVille) {
+    /// return Integer.compare(this.population, autreVille.getPopulation());
+    /// }
 
 }

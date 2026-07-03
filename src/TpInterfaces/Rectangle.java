@@ -20,4 +20,11 @@ public class Rectangle implements ObjetGeometrique {
         return longueur * largeur;
     }
 
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "longueur=" + longueur +
+                ", largeur=" + largeur +
+                '}';
+    }
 }

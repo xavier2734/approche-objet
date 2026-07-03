@@ -5,10 +5,13 @@ public class TestObjetGeometrique {
     public static void main(String[] args) {
 
         ObjetGeometrique[] objets = new ObjetGeometrique[2];  /// Création d'un tableau de 2 objets géométriques
-
-
         objets[0] = new Cercle(10); /// On place un cercle
         objets[1] = new Rectangle(10, 20); /// On place un rectangle
+
+
+        /// ou ArrayList<ObjetGeometrique> tabGeos = new ArrayList<>();
+        /// tabGeos.add(new Cercle(2.0));
+        /// tabGeos.add(new Rectangle(10.0, 8.25));
 
         /// Parcours du tableau
         for (ObjetGeometrique objet : objets) {

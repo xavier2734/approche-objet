@@ -30,5 +30,17 @@ public class TestCasa {
         System.out.println("\nAprès tri (par habitants) :");
         System.out.println(villes);
 
+        /// TRI PAR NOM
+        Collections.sort(villes, new ComparatorNom());
+        System.out.println("\nTri par nom :");
+        System.out.println(villes);
+
+        /// TRI PAR HABITANTS
+        Collections.sort(villes, new ComparatorHabitant());
+        System.out.println("\nTri par habitants :");
+        System.out.println(villes);
+
     }
+
+
 }
