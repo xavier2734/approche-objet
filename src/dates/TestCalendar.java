@@ -1,4 +1,4 @@
-package fr.diginamic.dates;
+package dates;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -42,7 +42,7 @@ public class TestCalendar {
         ///  SimpleDateFormat formateur = new SimpleDateFormat("EEEE dd MMMM yyyy", Locale.FRANCE);
         ///  System.out.println(formateur.format(new Date()));
 
-        /// Français
+        /// Français -- Locale.FRANCE facultatif
         SimpleDateFormat fr = new SimpleDateFormat("EEEE dd MMMM yyyy HH:mm:ss", Locale.FRANCE);
         System.out.println(fr.format(dateJour));
 

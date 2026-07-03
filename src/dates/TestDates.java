@@ -1,4 +1,4 @@
-package fr.diginamic.dates;
+package dates;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
