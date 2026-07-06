@@ -2,7 +2,7 @@ package tri;
 
 import java.util.Objects;
 
-class Casa implements Comparable<Casa> {
+public class Casa implements Comparable<Casa> {
 
     private String nom;
     private int nbHabitants;
