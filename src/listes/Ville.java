@@ -10,7 +10,7 @@ import java.util.Objects;
  * Représente une ville au sein du package listes avec ses données démographiques.
  * Cette classe implémente les méthodes de comparaison equals et hashCode pour permettre
  * des manipulations avancées au sein de listes dynamiques.
- * 
+ *
  * @author xavier2734
  * @version 1.0
  */
@@ -24,7 +24,7 @@ public class Ville {
     // tout est généré
     /**
      * Constructeur complet permettant d'initialiser une nouvelle instance de Ville.
-     * 
+     *
      * @param nom              Le nom de la ville.
      * @param codeDepartement  Le numéro ou code du département.
      * @param nomRegion        Le nom de la région associée.
@@ -39,7 +39,7 @@ public class Ville {
 
     /**
      * Récupère le nom de la ville.
-     * 
+     *
      * @return Le nom de la ville.
      */
     public String getNom() {
@@ -47,8 +47,17 @@ public class Ville {
     }
 
     /**
+     * Modifie le nom de la ville.
+     *
+     * @param nom Le nouveau nom à attribuer à la ville.
+     */
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    /**
      * Récupère le code du département de la ville.
-     * 
+     *
      * @return Le code du département.
      */
     public String getCodeDepartement() {
@@ -57,7 +66,7 @@ public class Ville {
 
     /**
      * Récupère le nom de la région de la ville.
-     * 
+     *
      * @return Le nom de la région.
      */
     public String getNomRegion() {
@@ -66,7 +75,7 @@ public class Ville {
 
     /**
      * Récupère la population totale de la ville.
-     * 
+     *
      * @return Le nombre total d'habitants.
      */
     public int getPopulationTotale() {
@@ -76,7 +85,7 @@ public class Ville {
     /**
      * Compare cette instance de Ville avec un autre objet pour vérifier leur égalité
      * en se basant sur l'ensemble des attributs.
-     * 
+     *
      * @param o L'objet à comparer avec cette ville.
      * @return true si les objets sont identiques ou ont les mêmes valeurs, false sinon.
      */
@@ -88,7 +97,7 @@ public class Ville {
 
     /**
      * Génère un code de hachage unique pour cette instance de Ville.
-     * 
+     *
      * @return Le hash code calculé à partir des attributs de la ville.
      */
     @Override
@@ -98,7 +107,7 @@ public class Ville {
 
     /**
      * Retourne une représentation textuelle des informations de la ville.
-     * 
+     *
      * @return Une chaîne décrivant l'état de l'objet Ville.
      */
     @Override
