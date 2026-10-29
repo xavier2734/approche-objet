@@ -2,8 +2,24 @@ package entites;
 
 import entites2.Personne;
 
+/**
+ * Classe de test permettant de valider le comportement de la classe Personne
+ * et ses interactions avec la classe AdressePostale.
+ * Elle teste l'initialisation, la modification de l'identité, l'assignation d'adresses,
+ * ainsi que l'utilisation des getters et des méthodes d'affichage.
+ *
+ * @author xavier2734
+ * @version 1.0
+ */
 public class TestPersonne {
 
+    /**
+     * Point d'entrée principal de l'application de test.
+     * Instancie les adresses, les personnes, exécute les modifications demandées
+     * et affiche les différents résultats dans la console.
+     *
+     * @param args Les arguments de la ligne de commande (non utilisés ici).
+     */
     public static void main(String[] args) {
 
         AdressePostale a1 =
@@ -13,8 +29,6 @@ public class TestPersonne {
         AdressePostale a2 =
                 new AdressePostale(17, "rue convert",
                         "33000", "Bordeaux");
-
-
 
 
         Personne p1 = new Personne("Jean", "Bon");
@@ -47,5 +61,3 @@ public class TestPersonne {
         System.out.println(p1.getAdresse());
     }
 }
-
-
