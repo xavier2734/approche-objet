@@ -5,29 +5,45 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
+/**
+ * Classe de test pour la manipulation des dates et des calendriers en Java.
+ * Elle illustre l'utilisation de la classe Calendar et le formatage des dates
+ * dans différentes langues avec SimpleDateFormat.
+ *
+ * @author xavier2734
+ * @version 1.0
+ */
 public class TestCalendar {
 
+    /**
+     * Point d'entrée principal de l'application.
+     * Initialise des dates, applique des configurations régionales (Locales)
+     * et affiche les résultats formatés dans la console.
+     *
+     * @param args Les arguments de la ligne de commande (non utilisés ici).
+     */
     public static void main(String[] args) {
 
-        /// Exemple du cours :
-        /// Calendar cal = Calendar.getInstance();
-        /// cal.set(2020, 6, 7, 19, 30, 56);
-        /// Date date = cal.getTime();
+        // Date à la date du
+        // 19 mai 2016 à 23h59 et 30 secondes et affichez
+
+        // Exemple du cours :
+        // Calendar cal = Calendar.getInstance();
+        // cal.set(2020, 6, 7, 19, 30, 56);
+        // Date date = cal.getTime();
         Calendar calendrier = Calendar.getInstance();
 
-        calendrier.set(2016, Calendar.MAY, 19, 23, 59, 30);  /// 19 mai 2016 à 23:59:30
+        calendrier.set(2016, Calendar.MAY, 19, 23, 59, 30);  // 19 mai 2016 à 23:59:30
 
         Date date = calendrier.getTime();
 
-        ///  Exemple du cours :
-        ///  SimpleDateFormat formateur = new SimpleDateFormat(“dd/MM/yyyy HH:mm:ss”); sans heures, minutes secondes
+        // Exemple du cours :
+        // SimpleDateFormat formateur = new SimpleDateFormat(“dd/MM/yyyy HH:mm:ss”); sans heures, minutes secondes
         SimpleDateFormat format1 = new SimpleDateFormat("dd/MM/yyyy");
         System.out.println(format1.format(date));
 
 
-
-
-        Calendar aujourdHui = Calendar.getInstance();  /// Date du jour
+        Calendar aujourdHui = Calendar.getInstance();  // Date du jour
 
         Date dateJour = aujourdHui.getTime();
 
@@ -35,35 +51,27 @@ public class TestCalendar {
         System.out.println(format2.format(dateJour));
 
 
-        ///  Date à la date du
-        /// 19 mai 2016 à 23h59 et 30 secondes et affichez
+        // Exemple du cours :
+        // SimpleDateFormat formateur = new SimpleDateFormat("EEEE dd MMMM yyyy", Locale.FRANCE);
+        // System.out.println(formateur.format(new Date()));
 
-        ///  Exemple du cours :
-        ///  SimpleDateFormat formateur = new SimpleDateFormat("EEEE dd MMMM yyyy", Locale.FRANCE);
-        ///  System.out.println(formateur.format(new Date()));
-
-        /// Français -- Locale.FRANCE facultatif
+        // Français -- Locale.FRANCE facultatif
         SimpleDateFormat fr = new SimpleDateFormat("EEEE dd MMMM yyyy HH:mm:ss", Locale.FRANCE);
         System.out.println(fr.format(dateJour));
 
 
-
-        /// Russe
+        // Russe
         SimpleDateFormat ru = new SimpleDateFormat("EEEE dd MMMM yyyy HH:mm:ss", new Locale("ru"));
         System.out.println(ru.format(dateJour));
 
 
-
-        /// Chinois
+        // Chinois
         SimpleDateFormat cn = new SimpleDateFormat("EEEE dd MMMM yyyy HH:mm:ss", Locale.CHINA);
         System.out.println(cn.format(dateJour));
 
 
-
-        /// Allemand
+        // Allemand
         SimpleDateFormat de = new SimpleDateFormat("EEEE dd MMMM yyyy HH:mm:ss", Locale.GERMANY);
         System.out.println(de.format(dateJour));
-
     }
-
 }
