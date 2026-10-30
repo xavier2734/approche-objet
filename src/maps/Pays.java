@@ -1,44 +1,70 @@
 package maps;
 
+/**
+ * Représente un pays défini par son nom, son nombre d'habitants en millions
+ * et le continent auquel il appartient.
+ *
+ * @author xavier2734
+ * @version 1.0
+ */
 public class Pays {
 
-    /// Nom du pays
+    /** Le nom du pays. */
     private String nom;
 
-    /// Nombre d'habitants (en millions)
+    /** Le nombre d'habitants (en millions). */
     private int habitants;
 
-    /// Continent
+    /** Le continent sur lequel se situe le pays. */
     private String continent;
 
-    ///Constructeur
-
+    /**
+     * Constructeur complet permettant d'initialiser un nouveau pays.
+     *
+     * @param nom       Le nom du pays.
+     * @param habitants Le nombre d'habitants en millions.
+     * @param continent Le continent associé.
+     */
     public Pays(String nom, int habitants, String continent) {
         this.nom = nom;
         this.habitants = habitants;
         this.continent = continent;
     }
 
-    /// Getter du nom
+    /**
+     * Retourne le nom du pays.
+     *
+     * @return Le nom du pays.
+     */
     public String getNom() {
         return nom;
     }
 
-    /// Getter du nombre d'habitants
+    /**
+     * Retourne le nombre d'habitants (en millions).
+     *
+     * @return Le nombre d'habitants.
+     */
     public int getHabitants() {
         return habitants;
     }
 
-    /// Getter du continent
+    /**
+     * Retourne le continent du pays.
+     *
+     * @return Le continent du pays.
+     */
     public String getContinent() {
         return continent;
     }
 
-    /// Affichage d'un pays
+    /**
+     * Retourne une représentation textuelle personnalisée du pays.
+     *
+     * @return Une chaîne de caractères contenant les informations du pays.
+     */
     @Override
     public String toString() {
         return nom + " - " + habitants + " millions - " + continent;
     }
-
-
 }

@@ -3,12 +3,32 @@ package maps;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * Classe principale permettant de compter le nombre de pays par continent
+ * à partir d'une liste de pays prédéfinie.
+ *
+ * @author xavier2734
+ * @version 1.0
+ */
 public class ComptagePaysParContinent {
 
-    public static void main(String args[]) {
+    /**
+     * Constructeur par défaut de la classe ComptagePaysParContinent.
+     */
+    public ComptagePaysParContinent() {
+        // Constructeur vide explicite
+    }
 
-        /// Création de la liste des pays
+    /**
+     * Point d'entrée de l'application.
+     * Initialise la liste des pays, effectue le comptage par continent
+     * à l'aide d'une Map, puis affiche les résultats.
+     *
+     * @param args Les arguments de la ligne de commande (non utilisés ici).
+     */
+    public static void main(String[] args) {
 
+        // Création de la liste des pays
         ArrayList<Pays> listePays = new ArrayList<>();
 
         listePays.add(new Pays("France", 65, "Europe"));
@@ -19,46 +39,39 @@ public class ComptagePaysParContinent {
         listePays.add(new Pays("Indonésie", 220, "Océanie"));
         listePays.add(new Pays("Australie", 20, "Océanie"));
 
-        /// HashMap de comptage : clé = continent et valeur = nombre de pays
-
+        // HashMap de comptage : clé = continent (String) et valeur = nombre de pays (Integer)
         HashMap<String, Integer> comptage = new HashMap<>();
 
-        /// Parcours de la liste
-
+        // Parcours de la liste des pays pour alimenter les compteurs
         for (Pays pays : listePays) {
             String continent = pays.getContinent();
 
-            /// Si le continent existe déjà
+            // Approche 1 : Utilisation de containsKey()
             if (comptage.containsKey(continent)) {
                 int nombre = comptage.get(continent);
                 comptage.put(continent, nombre + 1);
             }
-            /// Sinon on l'ajoute avec 1 pays
             else {
                 comptage.put(continent, 1);
             }
 
-            /*
-             HashMap<String, Integer> compteurs = new HashMap<>();
-             for (Pays pays : listePays){
-             String continent = pays.getContinent();
-             if (compteurs.get(continent)==null){
-                 compteurs.put(continent, 1);
-             }
-               else {
-                   Integer compteur = compteurs.get(continent);
-                   compteur++;
-                   compteurs.put(continent, compteur);
-                  }
-             }
-           */
+            // --- APPROCHE ALTERNATIVE (Commentée à but pédagogique) ---
+            // On peut aussi tester si get() renvoie null au lieu d'utiliser containsKey() :
+            //
+            // if (comptage.get(continent) == null) {
+            //     comptage.put(continent, 1); // Premier passage : on initialise à 1
+            // } else {
+            //     Integer compteur = comptage.get(continent);
+            //     compteur++; // Incrémentation locale
+            //     comptage.put(continent, compteur); // Mise à jour de la Map
+            // }
+            // -----------------------------------------------------------
         }
-        /// Affichage du résultat
 
+        // Affichage du résultat final
         System.out.println("Nombre de pays par continent :");
-        for (String continent : comptage.keySet())
+        for (String continent : comptage.keySet()) {
             System.out.println(continent + " : " + comptage.get(continent));
-
+        }
     }
 }
-

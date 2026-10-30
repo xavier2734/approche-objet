@@ -298,6 +298,8 @@ valeur = salaire
 
 ---
 
+
+---
 ## Erreur n°2
 
 Penser que plusieurs clés identiques sont possibles.
@@ -596,8 +598,6 @@ Par exemple :
 
 3 → Orange
 ```
-
----
 
 ## 📖 Pourquoi créer une troisième HashMap ?
 
